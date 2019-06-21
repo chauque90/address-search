@@ -1,0 +1,64 @@
+.btn-group {
+  text-align: right;
+
+  &.align-left {
+    text-align: left;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+
+  form-button {
+    outline: none;
+
+    + form-button {
+      @include media-breakpoint-up(sm) {
+        .btn {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  &.btn-group-full-width-sm {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+
+      form-button {
+        .btn {
+          margin: 0;
+          width: 100%;
+        }
+
+        + form-button {
+          .btn {
+            margin-left: 0;
+            margin-top: 15px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.reverse-order-sm {
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      form-button {
+        .btn {
+          margin: 0;
+        }
+
+        + form-button {
+          .btn {
+            margin: 0 0 15px;
+          }
+        }
+      }
+    }
+  }
+
+}

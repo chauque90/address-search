@@ -1,0 +1,25 @@
+<div class="tile-container">
+  <div class="">Icon here</div>
+  <div class="text-container">
+    <div class="main-text">Edit building details</div>
+    <div class="sub-text">Pinelands, Cape Town, 7405</div>
+  </div>
+  <div class="toggle-container" (click)="toggleDoor()">
+    <div class="">{{ dynamicIcon }}</div>
+    <div class="">{{ toggleText }}</div>
+  </div>
+</div>
+<div class="ng-container" *ngIf="toggleBoolean">
+  <h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
+  </li>
+</ul>
+</div>

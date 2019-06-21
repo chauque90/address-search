@@ -1,0 +1,398 @@
+@import './variables';
+
+@font-face {
+  font-family: $font-family-icons;
+  src: url('./assets/icons/cb-icons.eot');
+  src: url('./assets/icons/cb-icons.eot#iefix') format('embedded-opentype'),
+    url('./assets/icons/cb-icons.ttf') format('truetype'),
+    url('./assets/icons/cb-icons.woff') format('woff'),
+    url('./assets/icons/cb-icons.svg#cb-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// scss-lint:disable ImportantRule
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: $font-family-icons !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+// scss-lint:enable ImportantRule
+
+.icon-help-alt {
+
+  &::before {
+    align-self: center;
+    background: transparent;
+    border: 2px solid $grey-dark;
+    border-radius: 50%;
+    content: '?';
+    display: flex;
+    font-family: $font-family-base;
+    font-size: $font-size-small;
+    height: 20px;
+    justify-content: center;
+    line-height: 16px;
+    width: 20px;
+  }
+}
+
+.icon-info::before {
+  content: '\e94e';
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.icon-pay-once-off::before {
+  content: '\e90c';
+}
+
+.icon-confirm-pending::before {
+  content: '\e90b';
+}
+
+.icon-card::before {
+  content: '\e907';
+}
+
+.icon-fraud::before {
+  content: '\e908';
+}
+
+.icon-rewards::before {
+  content: '\e909';
+}
+
+.icon-pdf::before {
+  content: '\e906';
+}
+
+.icon-download::before {
+  content: '\e95c';
+}
+
+.icon-tick::before {
+  content: '\e95a';
+}
+
+.icon-absa-logo::before {
+  content: '\e928';
+}
+
+.icon-account::before {
+  content: '\e929';
+}
+
+.icon-accounts::before {
+  content: '\e92a';
+}
+
+.icon-add-beneficiary::before {
+  content: '\e905';
+}
+
+.icon-alert::before {
+  content: '\e92b';
+}
+
+.icon-amount::before {
+  content: '\e92c';
+}
+
+.icon-apply::before {
+  content: '\e92d';
+}
+
+.icon-back::before {
+  content: '\e92e';
+}
+
+.icon-beneficiary::before {
+  content: '\e92f';
+}
+
+.icon-bolt::before {
+  content: '\e930';
+}
+
+.icon-buy::before {
+  content: '\e931';
+}
+
+.icon-calendar::before,
+.icon-future-dated::before {
+  content: '\e95b';
+}
+
+.icon-cashsend::before {
+  content: '\e932';
+}
+
+.icon-chevron-right::before {
+  content: '\e933';
+}
+
+.icon-chevron::before {
+  content: '\e934';
+}
+
+.icon-close::before {
+  content: '\e935';
+}
+
+.icon-collapse-menu::before {
+  content: '\e936';
+}
+
+.icon-confirm::before {
+  content: '\e95e';
+}
+
+.icon-contact::before {
+  content: '\e937';
+}
+
+.icon-date-range-arrow::before {
+  content: '\e938';
+}
+
+.icon-delete::before {
+  content: '\e939';
+}
+
+.icon-delink::before,
+.icon-delink-device::before {
+  content: '\e913';
+}
+
+.icon-deselected::before {
+  content: '\e93a';
+}
+
+.icon-email::before {
+  content: '\e93b';
+}
+
+.icon-facebook::before {
+  content: '\e904';
+}
+
+.icon-fax::before {
+  content: '\e93c';
+}
+
+.icon-history::before {
+  content: '\e93d';
+}
+
+.icon-handle::before {
+  content: '\e93e';
+}
+
+.icon-help::before {
+  content: '\e95d';
+}
+
+.icon-home::before {
+  content: '\e93f';
+}
+
+.icon-institute::before {
+  content: '\e940';
+}
+
+.icon-insurance::before {
+  content: '\e941';
+}
+
+.icon-link::before {
+  content: '\e942';
+}
+
+.icon-link-alt::before,
+.icon-link-device::before {
+  content: '\e911';
+}
+
+.icon-lock::before {
+  content: '\e900';
+}
+
+.icon-lock-tick::before {
+  content: '\e915';
+}
+
+.icon-make-verification-device::before {
+  content: '\e912';
+}
+
+.icon-manage-beneficiaries::before {
+  content: '\e943';
+}
+
+.icon-manage::before {
+  content: '\e944';
+}
+
+.icon-menu::before {
+  content: '\e945';
+}
+
+.icon-mobile::before {
+  content: '\e946';
+}
+
+.icon-pay::before {
+  content: '\e947';
+}
+
+.icon-pin::before {
+  content: '\e948';
+}
+
+.icon-play::before {
+  content: '\e916';
+}
+
+.icon-print::before {
+  content: '\e949';
+}
+
+.icon-promotions-home::before {
+  content: '\e94a';
+}
+
+.icon-promotions-recepiet::before {
+  content: '\e94b';
+}
+
+.icon-promotions-save::before {
+  content: '\e94c';
+}
+
+.icon-resend::before {
+  content: '\e901';
+}
+
+.icon-result-fail::before {
+  content: '\e94d';
+}
+
+.icon-result-pending::before {
+  content: '\e94e';
+}
+
+.icon-result-success::before {
+  content: '\e917';
+}
+
+.icon-search::before {
+  content: '\e951';
+}
+
+.icon-selected::before {
+  content: '\e952';
+}
+
+.icon-settings::before {
+  content: '\e953';
+}
+
+.icon-stamp::before {
+  content: '\e90a';
+}
+
+.icon-surecheck::before {
+  content: '\e954';
+}
+
+.icon-switch-beneficiaries::before {
+  content: '\e903';
+}
+
+.icon-table-filter::before {
+  content: '\e955';
+}
+
+.icon-tax-certification:before {
+  content: '\e911';
+}
+
+.icon-time::before {
+  content: '\e956';
+}
+
+.icon-transfer::before {
+  content: '\e957';
+}
+
+.icon-tvn::before {
+  content: '\e958';
+}
+
+.icon-twitter:before {
+  content: '\e902';
+}
+
+.icon-view::before {
+  content: '\e959';
+}
+
+.icon-car-vehicle-insurance::before {
+  content: '\e960';
+}
+
+.icon-car-vehicle::before {
+  content: '\e961';
+}
+
+.icon-travel-location::before {
+  content: '\e962';
+}
+
+.icon-whatsapp::before {
+  content: '\e91d';
+}
+
+.icon-car-vehicle-collision-crash::before {
+  content: '\e90e';
+}
+
+.icon-cloud-rain-weather::before {
+  content: '\e90f';
+}
+
+.icon-flame::before {
+  content: '\e910';
+}
+
+.icon-fraud-new::before {
+  content: '\e918';
+}
+
+.icon-id::before {
+  content: '\e919';
+}
+
+.icon-arrow-refresh::before {
+  content: '\e91a';
+}
+
+.icon-mute::before {
+  content: '\e91b';
+}
+
+.icon-validation-error:before {
+  content: '\e90d';
+}
+
+.icon-validation-warning:before {
+  content: '\e91c';
+}

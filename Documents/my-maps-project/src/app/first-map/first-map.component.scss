@@ -1,0 +1,68 @@
+@import '../../styles/common/mixins';
+@import '../../styles/common/colours';
+@import '../../styles/common/variables';
+
+
+.form-control {
+  @include placeholder($graphite-25);  background-color: $white;
+  background-image: none;
+  border: 1px solid $graphite-25;
+  border-radius: 5px;
+  color: $graphite-100;
+  font-size: $font-size-medium;
+  height: $input-height-base-resonance;
+  line-height: $input-height-base-resonance;
+  padding-left: 16px;
+  transition: all .5s;
+  vertical-align: middle;
+  width: 100%;
+
+
+  &:focus,
+  &:hover {
+    box-shadow: $input-hover-shadow-resonance;
+    outline: 0;
+  }
+
+  &:focus {
+    border-color: $brand-plum-light;
+  }
+
+  .form-error,
+  .form-warning {
+    display: flex;
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+  }
+
+  .form-error {
+    color: $brand-error;
+  }
+
+  .form-warning {
+    color: $brand-warning;
+  }
+
+  &.form-control--remove-border-bottom {
+    border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+}
+
+// .pac-container {
+//   border-color: $brand-plum-light;
+// }
+
+:host-context(.pac-container) {
+  .pac-logo {
+    &.hdpi {
+      border-color: $brand-plum-light;
+    }
+  }
+}
+
+.search-results {
+  font-size: 20px;
+  color: #6cbdc6;
+  margin: 10px;
+  text-align: left;
+}

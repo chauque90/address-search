@@ -1,0 +1,25 @@
+@import 'forms/btn-group';
+@import 'forms/form-group';
+@import 'forms/form-error';
+@import 'forms/form-warning';
+
+// These have all been moved to component-specific stylesheets, e.g. in the form-dropdown component.
+// @import 'forms/btn';
+// @import 'forms/checkbox';
+// @import 'forms/dropdown';
+// @import 'forms/dropdown-search';
+// @import 'forms/input';
+// @import 'forms/radio';
+// @import 'forms/input-limit-change';
+
+fieldset {
+  margin-bottom: 20px;
+
+  legend {
+    border-bottom: 1px solid $grey-light;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+    margin-bottom: 24px;
+    padding-bottom: 4px;
+  }
+}

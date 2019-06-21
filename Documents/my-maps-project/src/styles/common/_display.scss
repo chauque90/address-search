@@ -1,0 +1,54 @@
+// scss-lint:disable ImportantRule
+// Disabling this rule because these classes' display property needs to override the existing style
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none {
+      display: none !important;
+    }
+
+    .d#{$infix}-inline {
+      display: inline !important;
+    }
+
+    .d#{$infix}-inline-block {
+      display: inline-block !important;
+    }
+
+    .d#{$infix}-block {
+      display: block !important;
+    }
+
+    .d#{$infix}-flex {
+      display: flex !important;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($table-row-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $table-row-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $table-row-breakpoints);
+
+    .d-tablerow#{$infix}-none {
+      display: none !important;
+    }
+
+    .d-tablerow#{$infix}-inline {
+      display: inline !important;
+    }
+
+    .d-tablerow#{$infix}-inline-block {
+      display: inline-block !important;
+    }
+
+    .d-tablerow#{$infix}-block {
+      display: block !important;
+    }
+
+    .d-tablerow#{$infix}-flex {
+      display: flex !important;
+    }
+  }
+}

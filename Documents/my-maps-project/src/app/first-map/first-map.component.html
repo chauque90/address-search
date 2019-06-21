@@ -1,0 +1,28 @@
+<div class="form-group" [formGroup]="parentFormGroup">
+  <div class="input-group">
+    <input 
+    appGooglePlaces
+    type="text"
+    class="form-control"
+    google-place
+    (onSelect)="setAddress($event)"
+    (input)="change($event)"
+    placeholder="{{ data.placeholder || 'Type here to search' }}"
+    [ngClass]="{'form-control--remove-border-bottom': inputModifer}"
+    (blur)="onBlur($event)">
+  </div>
+<div
+id="err_{{ data.name }}"
+*ngIf="formStatus.formErrors[data.name]"
+[ngClass]="{'submit-clicked': formStatus.submitClicked}"
+class="form-error"
+role="alert"
+[innerHTML]="formStatus.formErrors[data.name]">
+</div>
+
+<div *ngIf="addr">
+  <div class="search-results">
+    Search Data
+  </div>
+  {{ addr | json}}
+</div>

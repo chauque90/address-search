@@ -1,0 +1,42 @@
+.form-group {
+  margin-bottom: 25px;
+
+  legend,
+  label {
+    border-bottom: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+
+    &.is-hidden {
+      display: block;
+      height: 0;
+      margin-bottom: 0;
+      visibility: hidden;
+    }
+  }
+
+  .radio-subfield & {
+    margin-bottom: 0;
+  }
+}
+
+.form-group__info {
+  color: $grey-medium;
+  float: right;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 7px;
+
+  > a {
+    color: $brand-charcoal;
+    margin-left: 5px;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $brand-blue;
+    }
+  }
+}

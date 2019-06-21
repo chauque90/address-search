@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Address Search {{title}}!
+  </h1>
+  <img width="300" src="../assets/Chauque-Media--1.png">
+  <div class="google-input-width">
+    <app-first-map
+      [formStatus]="formStatus"
+      [parentFormGroup]="googleForm"
+      [data]="{
+        name: 'inputField'
+      }">
+    </app-first-map>
+    <!-- <app-simple-tile></app-simple-tile>
+    <p><input type="button" value="Clear" (click)="clearField()" /></p> -->
+  </div>
+</div>

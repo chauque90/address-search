@@ -1,0 +1,29 @@
+.sr-only {
+  @include sr-only();
+}
+
+.sr-only-focusable {
+  @include sr-only-focusable();
+}
+
+.sr-skip-to-content {
+  @include sr-only();
+  @include sr-only-focusable();
+
+  &:focus {
+    align-items: center;
+    background: rgba($grey-lightest, .9);
+    clip: auto;
+    color: $black;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    left: 0;
+    padding: 5px;
+    position: fixed;
+    text-decoration: none;
+    top: 0;
+    width: 210px;
+    z-index: $zindex-skip-to-content;
+  }
+}

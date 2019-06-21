@@ -1,0 +1,133 @@
+@import 'variables';
+@import 'mixins';
+
+.click-disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $z-index-click-disabled-mask;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.application {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 100vh;
+  position: relative;
+}
+
+.application__side-bar {
+  min-width: 210px;
+  position: fixed;
+  transition: min-width $transition-duration $transition-timing-function;
+  z-index: $zindex-nav;
+}
+
+.application__side-bar--collapsed {
+  min-width: 60px;
+}
+
+.application__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 9999;
+  height: 100%;
+  position: absolute;
+  transition: margin-left $transition-duration $transition-timing-function;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    padding-bottom: 60px;
+    padding-left: 0;
+  }
+
+  &.application__body--no-padding {
+    margin: 0;
+  }
+
+  &.body-click-disabled {
+    * {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.application__body--is-static {
+  overflow: hidden;
+}
+
+.application__navigation {
+  height: auto;
+  left: 0;
+  top: 0;
+  transition: margin-left $transition-duration $transition-timing-function;
+  z-index: $zindex-nav;
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 0;
+  }
+
+}
+
+.application__content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 9999;
+  justify-content: flex-start;
+  margin-left: 210px;
+  transition: margin-left $transition-duration $transition-timing-function;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+  }
+}
+
+// scss-lint:disable VendorPrefix
+.cb-highlight {
+  background-color: $grey-light;
+  border-radius: $border-radius-base;
+  display: inline-block;
+  font-weight: $font-weight-medium;
+  padding: 10px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+}
+// scss-lint:enable VendorPrefix
+
+.login-no-margin-left {
+  margin-left: 0;
+}
+
+.date-picker-col {
+  @include media-breakpoint-up(md) {
+    max-width: fit-content;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: 0 0 0 10px;
+  }
+}
+
+.date-range-seperator-text {
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+    margin: 0 -10px 0 -5px;
+    position: relative;
+    transform: translateY(40%);
+  }
+}
+

@@ -1,0 +1,23 @@
+.form-error {
+  align-items: center;
+  color: $brand-red-error;
+  display: none;
+  font-size: $font-size-medium;
+  margin-top: 3px;
+
+  &.submit-clicked {
+    display: block;
+  }
+
+  // scss-lint:disable PlaceholderInExtend
+  // Disabling this rule because we are not specifying our icons as %placeholders
+  @extend .icon-validation-error;
+  // scss-lint:enable PlaceholderInExtend
+
+  &:before {
+    display: none;
+    font-family: $font-family-icons;
+    font-size: $font-size-small;
+    margin-right: 5px;
+  }
+}
